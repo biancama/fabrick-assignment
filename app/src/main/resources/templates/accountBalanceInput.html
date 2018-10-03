@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_header :: header(~{::title})">
+    <title>Account Balance</title>
+</head>
+<body class="bg-light">
+
+<th:block th:replace="_nav :: nav"/>
+
+<main role="main" class="container">
+    <div class="py-5 text-center">
+        <h2>Account Balance</h2>
+        <p th:if="${validationError}" th:text="${validationError}">validation error</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+
+                <form action="#" th:action="@{/account-balance}" th:object="${accountBalanceForm}" method="post">
+
+                    <!-- number -->
+                    <div class="col-md-9 mb-3">
+                        <label class="control-label" for="accountNumber">Account Number <span class="text-muted">(0 - 999999999)</span></label>
+                        <input type="number" class="form-control" th:field="*{accountNumber}" />
+                        <div th:if="${#fields.hasErrors('accountNumber')}" th:errors="*{accountNumber}" class="help-block">error</div>
+                    </div>
+
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">confirm</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-muted text-center text-small">
+        <p class="mb-1">&nbsp;</p>
+    </footer>
+</main>
+
+<th:block th:replace="_include :: basic"/>
+</body>
+</html>

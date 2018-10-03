@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_header :: header(~{::title})">
+    <title>Fabrick api test</title>
+</head>
+<body class="bg-light">
+
+<th:block th:replace="_nav :: nav"/>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Fake Admin page</h1>
+    </div>
+
+    <div>
+        <p th:text="${message}">hello </p>
+        <p th:text="${date.toString()}">toString</p>
+    </div>
+
+</main><!-- /.container -->
+
+<th:block th:replace="_include :: basic"/>
+</body>
+</html>
