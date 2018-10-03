@@ -1,13 +1,12 @@
 package com.fabrick.assignment.form;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -16,6 +15,7 @@ import javax.validation.constraints.NotNull;
  * Created by massimo.biancalani on 03/10/2018.
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class AccountBalanceForm implements Serializable {
@@ -26,14 +26,11 @@ public class AccountBalanceForm implements Serializable {
     private Long accountNumber;
 
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
 
-    @Digits(integer = 9, fraction = 2)
     private String balance;
 
-    @Digits(integer = 9, fraction = 2)
-    private String availableBalance;
+     private String availableBalance;
 
     private String currency;
 }

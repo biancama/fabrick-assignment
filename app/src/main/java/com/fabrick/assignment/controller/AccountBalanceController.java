@@ -32,7 +32,7 @@ public class AccountBalanceController {
     }
 
     @PostMapping
-    public String conform(@Validated @ModelAttribute AccountBalanceForm form, BindingResult result, Model model) {
+    public String confirm(@Validated @ModelAttribute AccountBalanceForm form, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("validationError", "An invalid value was entered");
             return input(form, model);

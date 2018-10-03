@@ -34,6 +34,7 @@
 		<docker.image.prefix>com.fabrick</docker.image.prefix>
 		<lombok.version>1.16.12</lombok.version>
 		<lombok-maven-plugin.version>1.16.12.0</lombok-maven-plugin.version>
+		<maven-failsafe-plugin.version>2.18.1</maven-failsafe-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -97,7 +98,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-failsafe-plugin</artifactId>
-						<version>${failsafe.version}</version>
+						<version>${maven-failsafe-plugin.version}</version>
 						<executions>
 							<execution>
 								<goals>

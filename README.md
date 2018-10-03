@@ -49,27 +49,22 @@ Non è necessario lo sviluppo di un interfaccia utente;
 
 ### Run Application
 
-`java -jar app/target/app-1.0-SNAPSHOT-exec.jar`
+`java -jar app/target/app-0.0.1-SNAPSHOT-exec.jar
+`
 
 
 ### Manually test some endpoints
 Application Index
-`http://localhost:8080/app`
+`http://localhost:8080/`
 
-
+nel nav bar ci sono le due calls richieste
 ### Run with docker 
 
 create docker image
 `cd app && mvn docker:build`
 
 run container
-`docker run -p 8080:8080  com.biancama/busyflights`
+`docker run -p 8080:8080  com.fabrick/assignment`
 
 ### Cose che avrei voluto fare ma non ho avuto tempo
-* Make json request lowercase
-* Passing a json object as request (I didn't do it because for test sake it's easier write URL in README file)
 * Improve error handling. For example if date are not with correct format
-* Decouple Busy flights endpoint with supplier. In case Of A new supplier I want to change as less as possible the code
-* Check availability for number of passengers
-* Create an end point to return all possible paths from one departure airport to an arrival departure, according with date constraints.
-I thought abaout and the only one I could think it had O(n!) complexity. Maybe it exists a better one 
