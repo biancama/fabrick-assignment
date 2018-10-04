@@ -56,7 +56,7 @@ public class AccountBalanceServiceImplIT extends AbstractServiceTest {
                 .build())
             .build();
         // given
-        this.wireMock.stubFor(get(urlEqualTo(format("/accounts/%d/balance", accountId)))
+        this.wireMock.stubFor(get(urlEqualTo(format("/gbs/banking/v4.0/accounts/%d/balance", accountId)))
             .willReturn(aResponse().withStatus(200)
                 .withHeader(HttpHeaders.CONTENT_TYPE,
                     MediaType.APPLICATION_JSON_VALUE)

@@ -2,4 +2,4 @@ server:
   port: 8080
 fabrick:
   rest:
-    endpoint: https://sandbox.platfr.io/api/gbs/banking/v4.0
+    endpoint: https://sandbox.platfr.io/api

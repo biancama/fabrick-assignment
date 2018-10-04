@@ -29,7 +29,7 @@ public class AccountBalanceServiceImpl implements AccountBalanceService {
     public AccountBalance getAccountBalance(Long accountId) {
 
         ResponseEntity<AccountBalanceResponse> response = restTemplate.exchange(
-            format("%s/accounts/%d/balance", restEndpointUrl, accountId),
+            format("%s/gbs/banking/v4.0/accounts/%d/balance", restEndpointUrl, accountId),
             HttpMethod.GET,
             null,
             AccountBalanceResponse.class);

@@ -38,6 +38,7 @@ Non è necessario lo sviluppo di un interfaccia utente;
 # M. Biancalani comments
 * accountId sul testo dell'esercizio e' riportato come Long, mentre sul sito `https://www.platfr.io/#/docs/api#GET-BankingAccountBalance40` e' una stringa
 * Account Balance date e' del format `YYYY-MM-dd`, mentre sul sito `https://www.platfr.io/#/docs/api#GET-BankingAccountBalance40` e' `dd/MM/YYYY`
+* Create Order Channel e' specificato come `CARD` e `MONEYTRANSFER` ma api ritorna `wiretransfer`
 ### Compiling and packaging
 `mvn clean package -DskipTests`
 
@@ -49,8 +50,7 @@ Non è necessario lo sviluppo di un interfaccia utente;
 
 ### Run Application
 
-`java -jar app/target/app-0.0.1-SNAPSHOT-exec.jar
-`
+`java -jar app/target/app-0.0.1-SNAPSHOT-exec.jar`
 
 
 ### Manually test some endpoints
